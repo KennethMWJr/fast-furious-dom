@@ -1,3 +1,5 @@
+//import { create } from "domain";
+
 //import { ENGINE_METHOD_ALL } from "constants";
 
 let quotes = [
@@ -65,13 +67,20 @@ makeSpecialTitlesBigger();
 
   // Part 6
   function addPastRace() {
-
+let createChild = document.createElement("LI");
+let city = document.createTextNode("Miami");
+createChild.appendChild(city);
+document.getElementById("past-races").appendChild(createChild); 
   }
+  addPastRace();
 
 
   // Part 7
   function createNewBlogPost() {
-
+let newPost = document.createElement("DIV");
+newPost.classList.add("blog-post purple");
+let newHeader = document.createElement("H1");
+let newCity = document.createElement("")
   }
 
 });
