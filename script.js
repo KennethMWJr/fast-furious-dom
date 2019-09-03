@@ -1,3 +1,5 @@
+//import { ENGINE_METHOD_ALL } from "constants";
+
 let quotes = [
   `I live my life a quarter mile at a time`,
   `I said a ten-second car, not a ten-minute car`,
@@ -36,20 +38,30 @@ changeBodyBgColor();
 
   // Part 3
   function removeLastFavoriteThing() {
-
+let parent = document.getElementById("favorite-things");
+let child = parent.lastElementChild;
+parent.removeChild(child);
   }
-
+removeLastFavoriteThing();
 
   // Part 4
   function makeSpecialTitlesBigger() {
+let allST = document.querySelectorAll('.special-title');
 
-  }
+allST.forEach(item => {
+item.style.fontSize = 2; 
+  })
+}
+makeSpecialTitlesBigger();
+
 
 
   // Part 5
   function RemoveChicagoRace() {
-
+    let parent2 = document.getElementById("past-races");
+    let childChicago = parent2.getElementsByTagName("li")[3];parent2.removeChild(childChicago);
   }
+  RemoveChicagoRace();
 
   // Part 6
   function addPastRace() {
