@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Part 1
   function shortenPageTitle() {
-
+    let newTitle = document.getElementById("main-title").innerHTML = "Welcome to My Homepage";
+    console.log(newTitle);
   }
-
+  shortenPageTitle();
+  
 
   // Part 2
   function changeBodyBgColor() {
