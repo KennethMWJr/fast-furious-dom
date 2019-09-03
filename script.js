@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Part 2
   function changeBodyBgColor() {
-
+let newBackground = document.body.style.backgroundColor = "yellow"; 
+console.log(newBackground);
   }
+changeBodyBgColor();
 
 
   // Part 3
