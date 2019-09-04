@@ -11,12 +11,12 @@ let quotes = [
   `It don't matter if you win by an inch or a mile. Winning's winning.`,
 ];
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
   // Random quote of the day generator
   function randomQuote() {
     document.querySelector('#quote-of-the-day').textContent = `"${
       quotes[Math.floor(Math.random() * quotes.length)]
-    }"`;
+      }"`;
   };
   randomQuote();
 
@@ -28,59 +28,65 @@ document.addEventListener('DOMContentLoaded', function(event) {
     console.log(newTitle);
   }
   shortenPageTitle();
-  
+
 
   // Part 2
   function changeBodyBgColor() {
-let newBackground = document.body.style.backgroundColor = "yellow"; 
-console.log(newBackground);
+    let newBackground = document.body.style.backgroundColor = "yellow";
+    console.log(newBackground);
   }
-changeBodyBgColor();
+  changeBodyBgColor();
 
 
   // Part 3
   function removeLastFavoriteThing() {
-let parent = document.getElementById("favorite-things");
-let child = parent.lastElementChild;
-parent.removeChild(child);
+    let parent = document.getElementById("favorite-things");
+    let child = parent.lastElementChild;
+    parent.removeChild(child);
   }
-removeLastFavoriteThing();
+  removeLastFavoriteThing();
 
   // Part 4
   function makeSpecialTitlesBigger() {
-let allST = document.querySelectorAll('.special-title');
+    let allST = document.querySelectorAll('.special-title');
 
-allST.forEach(item => {
-item.style.fontSize = 2; 
-  })
-}
-makeSpecialTitlesBigger();
+    allST.forEach(item => {
+      item.style.fontSize = 2;
+    })
+  }
+  makeSpecialTitlesBigger();
 
 
 
   // Part 5
   function RemoveChicagoRace() {
     let parent2 = document.getElementById("past-races");
-    let childChicago = parent2.getElementsByTagName("li")[3];parent2.removeChild(childChicago);
+    let childChicago = parent2.getElementsByTagName("li")[3]; parent2.removeChild(childChicago);
   }
   RemoveChicagoRace();
 
   // Part 6
   function addPastRace() {
-let createChild = document.createElement("LI");
-let city = document.createTextNode("Miami");
-createChild.appendChild(city);
-document.getElementById("past-races").appendChild(createChild); 
+    let createChild = document.createElement("LI");
+    let city = document.createTextNode("Miami");
+    createChild.appendChild(city);
+    document.getElementById("past-races").appendChild(createChild);
   }
   addPastRace();
 
 
   // Part 7
   function createNewBlogPost() {
-let newPost = document.createElement("DIV");
-newPost.classList.add("blog-post purple");
-let newHeader = document.createElement("H1");
-let newCity = document.createElement("")
+    let findClass = document.querySelector(".main")
+    let newPost = document.createElement("div");
+    newPost.classList.add("blog-post", "purple");
+    newPost.innerHTML = `
+<h1>Miami</h1>
+<p>placeholder for content</p>
+`
+      ;
+    findClass.appendChild(newPost);
   }
+  createNewBlogPost();
 
 });
